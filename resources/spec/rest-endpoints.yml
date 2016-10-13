@@ -1,0 +1,92 @@
+swagger: '2.0'
+info:
+  version: v1
+  title: IETF.DNSoperator.API
+host: api.registry.tld
+basePath: /dnsop/v1
+schemes:
+  - https
+paths:
+  '/domains/{domain}/cds':
+    post:
+      summary: Bootstap (initial sign) a domain
+      operationId: createCDS
+      produces:
+        - none
+      parameters:
+        - name: Authorization
+          in: header
+          description: API Key
+          required: true
+          type: string
+        - name: domain
+          in: path
+          description: Domain Name
+          required: true
+          type: string
+      responses:
+        '201':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '404':
+          description: Domain/CDS not found
+        '500':
+          description: Server error
+    delete:
+      summary: Unsign a domain
+      operationId: deleteCDS
+      produces:
+        - none
+      parameters:
+        - name: Authorization
+          in: header
+          description: API Key
+          required: true
+          type: string
+        - name: domain
+          in: path
+          description: Domain Name
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '404':
+          description: Domain/CDS not found
+        '500':
+          description: Server error
+    put:
+      summary: Domain DS maintenance
+      operationId: updateCDS
+      produces:
+        - none
+      parameters:
+        - name: Authorization
+          in: header
+          description: API Key
+          required: true
+          type: string
+        - name: domain
+          in: path
+          description: Domain Name
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorised
+        '404':
+          description: Domain/CDS not found
+        '500':
+          description: Server error
+          

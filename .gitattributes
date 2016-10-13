@@ -1,0 +1,5 @@
+# unix install scripts line endings
+*.sh -crlf
+*.service -crlf
+pg_hba.conf -crlf
+dsap_dev -crlf
