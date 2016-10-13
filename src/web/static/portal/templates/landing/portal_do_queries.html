@@ -1,0 +1,34 @@
+
+    <script type="text/javascript">
+        if ("preview_check" in formValues){
+            prev_status = true;
+        } else {
+            prev_status = false;
+        }
+        if (formValues['button'] == "bootstrap_action_btn"){
+            $(document).ready(function () {
+                queryRestApi("POST", prev_status);
+            });
+        } else if (formValues['button'] == "update_action_btn"){
+            $(document).ready(function () {
+                queryRestApi("PUT", prev_status);
+            });
+        } else if (formValues['button'] == "unsign_action_btn"){
+            $(document).ready(function () {
+                queryRestApi("DELETE", prev_status);
+            });
+        } else {
+            $(document).ready(function () {
+
+                $("#rf_error").html("Error: could not determine which button was pressed.");
+                $("#rf_error").show();
+
+                $("#rf_debug").html( "{{ request.POST }}" );
+                $("#rf_debug").show();
+
+                $("#rf_lloading").hide();
+                $(".form-controlz").prop( "disabled", false );
+
+            });
+        }
+    </script>

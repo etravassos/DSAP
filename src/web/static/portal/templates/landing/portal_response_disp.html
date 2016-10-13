@@ -1,0 +1,13 @@
+{% load static from staticfiles %}
+
+{% block portal_response_disp %}
+    <pre class="prettyprint" id="rf_domain" hidden></pre>
+    <pre class="eprettyprint" id="rf_error" hidden></pre>
+    <pre class="prettyprint" id="rf_description" hidden></pre>
+    <pre class="prettyprint" id="rf_debug" hidden></pre>
+    <pre class="prettyprint" id="rf_epp_result" hidden></pre>
+    <div id="rf_lloading" style="text-align: center;">
+        <br>
+        {% include 'landing/loading_wheel.html' %}
+    </div>
+{% endblock %}

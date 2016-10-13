@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <br>
+<hr>
+        <div style="text-align: center;">
+            <span style="font-weight: bold;">Welcome to the DS Automated Provisioning (DSAP) prototype.</span>
+            <a href="https://github.com/CIRALabs/DSAP/tree/master" target="_blank">Detailed info</a>
+        </div>
+<hr>
+
+    {% crispy form %}
+    <div id="preview-confirm-dialog" title="Confirmation Required" hidden>
+    </div>
+    {% js 'portal/templates/landing/js/portal_landing.js' %}
+    <br>
+    {% css 'portal/css/loading_wheel.css' %}
+    <div id="dsap_response_container"></div>
+
+{% endblock %}

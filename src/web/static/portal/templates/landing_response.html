@@ -1,0 +1,7 @@
+{% load static from staticfiles %}
+
+{% block dsap_response %}
+    {% include 'landing/portal_landing_logic.html' %}
+    {% include 'landing/portal_response_disp.html' %}
+    {% include 'landing/portal_do_queries.html' %}
+{% endblock %}

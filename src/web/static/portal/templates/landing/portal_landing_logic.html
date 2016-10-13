@@ -1,0 +1,10 @@
+{% load static from staticfiles %}
+
+{% block portal_landing_logic %}
+    <script type="text/javascript">
+
+        {% include 'landing/js/utils.js' %}
+        {% include 'landing/js/queryRestApi.js' %}
+
+    </script>
+{% endblock %}

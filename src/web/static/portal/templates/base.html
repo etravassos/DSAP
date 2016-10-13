@@ -1,0 +1,140 @@
+{% load static from staticfiles %}
+{% load rest_framework %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  {% block head %}
+
+    {% block meta %}
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="robots" content="NONE,NOARCHIVE" />
+    {% endblock %}
+
+    <title>{% block title %}{% if name %}{{ name }} – {% endif %}DSAP{% endblock %}</title>
+
+    {% block style %}
+      {% block bootstrap_theme %}
+        {% css 'rest_framework/css/bootstrap.min.css' %}
+        {% css 'rest_framework/css/bootstrap-tweaks.css' %}
+      {% endblock %}
+
+      {% css 'rest_framework/css/jquery-ui-1.10.3.css' %}
+      {% css 'rest_framework/css/prettify.css' %}
+      {% css 'rest_framework/css/default.css' %}
+    {% endblock %}
+
+    {% block script %}
+      <script>
+        window.drf = {
+          csrfCookieName: "{{ csrf_cookie_name|default:'csrftoken' }}"
+        };
+      </script>
+      {% js 'rest_framework/js/jquery-1.12.4.min.js' %}
+      {% js 'rest_framework/js/jquery-ui-1.10.3.min.js' %}
+      {% js 'rest_framework/js/ajax-form.js' %}
+      {% js 'rest_framework/js/csrf.js' %}
+      {% js 'rest_framework/js/bootstrap.min.js' %}
+      {% js 'rest_framework/js/prettify-min.js' %}
+      {% js 'rest_framework/js/default.js' %}
+      <script>
+          $(document).ready(function() {
+              $('form').ajaxForm();
+          });
+      </script>
+    {% endblock %}
+
+  {% endblock %}
+</head>
+
+{% block body %}
+<body class="{% block bodyclass %}{% endblock %}">
+
+  <div class="wrapper">
+    {% block navbar %}
+      <div class="navbar navbar-static-top {% block bootstrap_navbar_variant %}navbar-inverse{% endblock %}">
+        <div class="container">
+          <span>
+            {% block branding %}
+              <a class='navbar-brand' rel="nofollow" href='/portal/'>
+                  <img src="{% static 'cira/logos/png/cira-logo-dsap.png' %}" alt="" style="height:80px;">
+              </a>
+              <a class='navbar-brand' rel="nofollow" href='/portal/'>
+                  <img src="{% static 'cira/logos/png/DSAP-logo.png' %}" alt="" style="height:80px; margin-left: 250px;">
+              </a>
+            {% endblock %}
+            
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {% if user.is_authenticated %}
+                          {{ user.username }}
+                        {% else %}
+                          Menu
+                        {% endif %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% if user.is_authenticated %}
+                          <li>
+                              <a href="/portal/logout/">Logout</a>
+                          </li>
+                          <li class="divider"></li>
+                          {% if user.is_superuser %}
+                          <li>
+                              <a href="/admin/">Admin Console</a>
+                          </li>
+                          {% endif %}
+                          <li>
+                              <a href="/portal/">Portal</a>
+                          </li>
+                        {% else %}
+                          <li>
+                              <a href="/portal/login/">Login</a>
+                          </li>
+                        {% endif %}
+                    </ul>
+                </li>
+              </ul>
+            
+          </span>
+        </div>
+      </div>
+    {% endblock %}
+
+    <div class="container">
+      {% block breadcrumbs %}
+        <ul class="breadcrumb">
+          {% for breadcrumb_name, breadcrumb_url in breadcrumblist %}
+            {% if forloop.last %}
+              <li class="active"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+            {% else %}
+              <li><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endblock %}
+
+      <!-- Content -->
+      <div id="content">
+
+          <div class="content-main">
+            {% block content %}
+            {% endblock %}
+
+          </div>
+
+      </div><!-- /.content -->
+    </div><!-- /.container -->
+  </div><!-- ./wrapper -->
+  <div style="float:right; margin-right: 200px;">
+       <img src="{% static 'cira/logos/png/powered-by-cira-labs.png' %}" alt="" style="height:80px; margin-left: 250px;">
+  </div>
+  {% if filter_form %}
+  {{ filter_form }}
+  {% endif %}
+
+</body>
+{% endblock %}
+</html>

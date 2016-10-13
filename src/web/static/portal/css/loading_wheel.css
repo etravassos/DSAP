@@ -1,0 +1,227 @@
+   @-webkit-keyframes uil-default-anim {
+        0% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    
+    @keyframes uil-default-anim {
+        0% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    
+    .uil-default-css> div:nth-of-type(1) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(2) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.43333333333333335s;
+        animation-delay: -0.43333333333333335s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(3) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.3666666666666667s;
+        animation-delay: -0.3666666666666667s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(4) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(5) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.23333333333333334s;
+        animation-delay: -0.23333333333333334s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(6) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.16666666666666669s;
+        animation-delay: -0.16666666666666669s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(7) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.09999999999999998s;
+        animation-delay: -0.09999999999999998s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(8) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: -0.033333333333333326s;
+        animation-delay: -0.033333333333333326s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(9) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.033333333333333326s;
+        animation-delay: 0.033333333333333326s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(10) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.09999999999999998s;
+        animation-delay: 0.09999999999999998s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(11) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.16666666666666663s;
+        animation-delay: 0.16666666666666663s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(12) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.23333333333333328s;
+        animation-delay: 0.23333333333333328s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(13) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.30000000000000004s;
+        animation-delay: 0.30000000000000004s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(14) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.3666666666666667s;
+        animation-delay: 0.3666666666666667s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .uil-default-css> div:nth-of-type(15) {
+        -webkit-animation: uil-default-anim 1s linear infinite;
+        animation: uil-default-anim 1s linear infinite;
+        -webkit-animation-delay: 0.43333333333333335s;
+        animation-delay: 0.43333333333333335s;
+    }
+    
+    .uil-default-css {
+        position: relative;
+        background: none;
+        width: 200px;
+        height: 200px;
+    }
